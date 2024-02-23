@@ -1,0 +1,260 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/finance_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="fragments.CurrencyFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/currency_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/background">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/currency_fragment_title"
+            android:textColor="@color/inputFieldTextColor"
+            android:textSize="30sp">
+        </TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll_first_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currency_toolbar"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal"
+        android:textSize="40sp">
+
+
+        <TextView
+            android:id="@+id/tv_currency_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/currency_fragment_rub"
+            android:textColor="@color/white"
+            android:textSize="30sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_rub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:hint="@string/hint"
+            android:textColorHint="@color/inputFieldTextColor"
+            android:singleLine="true"
+            android:textAlignment="textEnd"
+            android:textColor="@color/inputFieldTextColor"
+            android:textSize="25sp">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_second_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_first_row"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/currency_to_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/currency_fragment_usd"
+            android:textColor="@color/white"
+            android:textSize="30sp">
+        </TextView>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_down"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/tv_bottom_currency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:hint="@string/hint"
+            android:textColorHint="@color/inputFieldTextColor"
+            android:singleLine="true"
+            android:textAlignment="textEnd"
+            android:textColor="@color/inputFieldTextColor"
+            android:textSize="25sp">
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cb_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/calc_buttons"
+        android:fontFamily="@font/roboto_thin"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@string/currency_fragment_cb">
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/calc_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/ll_third_row"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/b_one"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_one_anim">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/b_two"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_two_anim">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/b_three"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_three_anim">
+
+            </ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fourth_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ll_third_row"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/b_four"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_four_anim">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/b_five"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_five_anim">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/b_six"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_six_anim">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/b_seven"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_seven"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            </ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fifth_row"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ll_fourth_row"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/b_eight"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_eight_anim">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/b_nine"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_nine_anim">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/b_zero"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_zero_anim">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/b_comma"
+                style="@style/currency_calc_buttons"
+                android:background="@drawable/button_comma_anim">
+
+            </ImageButton>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ll_fifth_row"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/b_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/fragments_all_clear_button__anim">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/b_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/fragments_delete_button_anim">
+
+            </ImageButton>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

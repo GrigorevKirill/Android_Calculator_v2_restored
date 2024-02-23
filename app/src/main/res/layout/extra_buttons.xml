@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sa"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+
+    <ImageButton
+        android:id="@+id/b_root"
+        style="@style/calc_buttons"
+        android:background="@drawable/button_root_anim"
+        app:layout_constraintBottom_toTopOf="@+id/b_factoiral"
+        app:layout_constraintEnd_toStartOf="@+id/b_pi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/b_exponent"
+        style="@style/calc_buttons"
+        android:background="@drawable/button_exponent_anim"
+        android:cropToPadding="false"
+        app:layout_constraintBottom_toBottomOf="@+id/b_right_bracket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b_right_bracket"
+        app:layout_constraintTop_toTopOf="@+id/b_right_bracket" />
+
+    <ImageButton
+        android:id="@+id/b_factoiral"
+        style="@style/calc_buttons"
+        android:background="@drawable/button_factorial_anim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b_left_bracket"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_root" />
+
+    <ImageButton
+        android:id="@+id/b_pi"
+        style="@style/calc_buttons"
+        android:background="@drawable/button_pi_anim"
+        android:cropToPadding="false"
+        app:layout_constraintBottom_toTopOf="@+id/b_exponent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b_root"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/b_right_bracket"
+        style="@style/calc_buttons"
+        android:background="@drawable/button_right_bracket_anim"
+        app:layout_constraintBottom_toBottomOf="@+id/b_left_bracket"
+        app:layout_constraintEnd_toStartOf="@+id/b_exponent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b_left_bracket"
+        app:layout_constraintTop_toTopOf="@+id/b_left_bracket" />
+
+    <ImageButton
+        android:id="@+id/b_left_bracket"
+        style="@style/calc_buttons"
+        android:background="@drawable/button_left_bracket_anim"
+        app:layout_constraintBottom_toBottomOf="@+id/b_factoiral"
+        app:layout_constraintEnd_toStartOf="@+id/b_right_bracket"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b_factoiral"
+        app:layout_constraintTop_toTopOf="@+id/b_factoiral" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
